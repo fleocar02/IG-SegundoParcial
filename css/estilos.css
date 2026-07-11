@@ -15,7 +15,7 @@ body {
     margin: 0;
 	padding: 0;
     background: linear-gradient(rgba(10, 10, 15, 0.8), rgba(10, 10, 15, 0.8)), url("../img/fondo.png");
-	font-family: "Hanken Grotesk", sans-serif; /*CAMBIAR FUENTE*/
+    font-family: "Open Sans", sans-serif;
 }
 
 #contenedor {
@@ -35,7 +35,6 @@ body {
 
 header,
 footer {
-	background: rgba(51, 0, 255, 0.156);
 	padding: 1rem;
 	text-align: center;
 }
@@ -52,6 +51,7 @@ footer {
 }
 
 #encabezado h1 {
+    font-family: 'Barlow', sans-serif;
     font-weight: 700;
     font-size: 4rem;
     margin: 0;
@@ -60,7 +60,6 @@ footer {
 }
 
 #subtitulo {
-    font-family: "Open Sans", sans-serif;
     font-size: 0.9rem;
     letter-spacing: 3px;
     margin-top: 10px;
@@ -70,7 +69,7 @@ footer {
 
 #subtitulo strong {
     color: var(--color-acento);
-    text-shadow: 0 0 5px rgba(255, 0, 195, 0.699), 0 0 10px rgba(137, 43, 226, 0.39), 0 0 20px rgba(138, 43, 226, 0.2);
+    text-shadow: 0 0 5px rgba(242, 0, 255, 0.227), 0 0 10px rgba(137, 43, 226, 0.227), 0 0 20px rgba(138, 43, 226, 0.2);
 }
 
 hr {
@@ -110,14 +109,56 @@ hr {
 
 /*----- CONTENIDO -----*/
 
-/*(3) COLUMNAS PAGINA PRINCIPAL MISMO ANCHO*/
+main {
+    padding: 50px;
+}
+    
+article {
+    margin-bottom: 40px;
+}
+    
+article h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.8rem;
+    border-left: 4px solid var(--color-primario);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+    
+article aside {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+    
+aside h3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.8rem;
+    border-left: 4px solid var(--color-acento);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+    
+p {
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+    
+ul li {
+    line-height: 1.8;
+    font-family: "Open Sans", sans-serif;
+    color: #444;
+    text-align: justify;
+}
+
+/* (3) COLUMNAS PAGINA PRINCIPAL MISMO ANCHO */
 
 .contenido-principal {
     display: flex;
     flex-direction: column;
 }
 
-/*(2) COLUMNAS PAGINA SECUNDARIA DISTINTO ANCHO*/
+/* (2) COLUMNAS PAGINA SECUNDARIA DISTINTO ANCHO */
 .contenido-secundario{
     display: flex;
     flex-direction: column;
@@ -129,6 +170,111 @@ hr {
 
 #columna-2{
     flex: 1;
+}
+
+/* TITULOS DE PÁGINA */
+
+.encabezado-body {
+    font-family: "Barlow", sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.08em;
+    border-bottom: 1px solid var(--fondo-header);
+    padding: 0 15px;
+    position: relative;
+}
+    
+.encabezado-body::after {
+    content: "*";
+    color: var(--color-acento);
+    opacity: 0.2;
+    font-size: 8rem;
+    position: absolute;
+    margin: 0;
+    right: 15px;
+    top: 0;
+    transform: translateY(-30%);
+    line-height: 1;
+}
+
+/* BLOQUE DE CITA */
+    
+.seccion-cita {
+    padding: 30px;
+    text-align: center;
+}
+    
+.frase-cita {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #222;
+    position: relative;
+    padding: 0 50px;
+    display: inline-block;
+}
+    
+.frase-cita::before,
+.frase-cita::after {
+    position: absolute;
+    font-size: 5rem;
+    opacity: 0.2;
+    color: var(--color-acento);
+    line-height: 1;
+}
+    
+.frase-cita::before {
+    content: "❝";
+    left: 0;
+}
+    
+.frase-cita::after {
+    content: "❞";
+    right: 0;
+}
+    
+.seccion-cita cite {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 300;
+}
+
+/* CONTENIDO INCRUSTRADO */
+    
+img,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.048);
+    transition: transform 0.3s ease;
+}
+    
+img:hover,
+video:hover {
+    transform: scale(1.01);
+    border-color: var(--color-acento);
+}
+    
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 30px 0;
+}
+    
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /*----- PIE DE PAGINA -----*/
