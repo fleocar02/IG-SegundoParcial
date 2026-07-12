@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./css/estilos.css" rel="stylesheet">
+
+    <title>Rafael Lozano-Hemmer | Artista Digital</title>
+</head>
+
+<body>
+    <div id="contenedor">
+        <header id="encabezado">
+            <h1>Rafael Lozano-Hemmer</h1>
+            <span id="subtitulo"><em>Interactividad, espacio público y <strong>arte</strong> tecnológico</em></span>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="experiencia.html">Experiencia</a></li>
+                    <li><a href="luces.html">🔦 Luces</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="encabezado-body">
+            <h1>Luces móviles</h1>
+            <span class="subtitulo-head"><em>Este es un sistema que controla el funcionamiento de las luces móviles de las obras de Rafael Lozano-Hemmer.</em></span>
+        </div>
+
+        <main class="formulario">
+
+            <form class="ejercicio" action="#" method="get">
+
+                <fieldset>
+                    <legend>Información sobre la obra</legend>
+
+                    <label for="nombre-obra">Ingrese el nombre de la obra:</label>
+                    <input type="text" name="nombre-obra" id="nombre-obra" required>
+
+                    <label for="cantidad-luces">Ingrese la cantidad de luces móviles que utiliza:</label>
+                    <input type="number" name="cantidad-luces" id="cantidad-luces" required>
+
+                    <label for="tiempo-funcionamiento">Ingrese el tiempo de funcionamiento por día (en horas):</label>
+                    <input type="number" name="tiempo-funcionamiento" id="tiempo-funcionamiento" required>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Costos de la obra</legend>
+
+                    <label for="consumo-hora">Ingrese el consumo de electricidad de cada luz móvil (por hora):</label>
+                    <input type="number" name="consumo-hora" id="consumo-hora" required>
+
+                    <label for="costo-kwh">Ingrese el costo por kWh:</label>
+                    <input type="number" name="costo-kwh" id="costo-kwh" required>
+
+                </fieldset>
+
+                <button type="submit">Agregar +1 obra</button>
+                <button type="reset">Reiniciar</button>
+                <!--Una vez que se obtienen los resultados se debe habilitar un botón para reiniciar.-->
+
+            </form>
+
+            <p id="cantidad-obras"></p>
+            <!--Cantidad de obras subidas hasta el momento-->
+
+            <p id="consumo-diario"></p>
+            <!--El consumo diario total en kWh entre todas las obras y el consumo diario promedio por obra-->
+
+            <p id="mayor-tiempo"></p>
+            <!--La obra con mayor tiempo de funcionamiento y su costo diario-->
+
+            <p id="porcentaje-obras"></p>
+            <!--El porcentaje de obras que utilizan más de 20 luces-->
+
+        </main>
+
+        <footer>
+            <address>
+                    Para contactarse escribir a <a href=" mailto:rafael@artedigital.com ">rafael@artedigital.com</a>
+                </address>
+        </footer>
+
+    </div>
+
+    <script src="ejercicio.js"></script>
+
+</body>
+
+</html>
