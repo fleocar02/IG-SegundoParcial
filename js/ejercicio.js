@@ -20,3 +20,43 @@ Una vez que se obtienen los resultados se debe habilitar un botón para reinicia
 -- Cuando se debe ingresar una cantidad determinada de datos y se cumple esa cantidad, se debe deshabilitar la opción para seguir ingresando.
 -- Las opciones para calcular resultados no se deben habilitar hasta que se haya finalizado la carga de datos necesaria para poder realizar los cálculos. 
 */
+
+
+// SELECCIÓN DE ELEMENTOS
+
+const formulario = document.querySelector(".ejercicio");
+const btnAgregar = document.querySelector("#agregar");
+const btnReset = document.querySelector("#reiniciar");
+
+const txtCantidadObras = document.querySelector("#cantidad-obras");
+const txtConsumoDiario = document.querySelector("#consumo-diario");
+const txtMayorTiempo = document.querySelector("#mayor-tiempo");
+const txtPorcentajeObras = document.querySelector("#porcentaje-obras");
+
+// VARIABLES
+
+let totalObras = 0;
+let consumoDiarioTotal = 0;
+let obrasMasDe20Luces = 0;
+
+let maxTiempoFuncionamiento = -1;
+let obraMayorTiempoNombre = "";
+let obraMayorTiempoCosto = 0;
+
+// ESTADO DE BOTÓN DESHABILITADO HASTA QUE HAYA RESULTADOS
+btnReset.disabled = true;
+
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // CAPTURA DE DATOS FORMULARIO
+    const nombreObra = document.querySelector("#nombre-obra").value;
+    const cantidadLuces = Number(document.querySelector("#cantidad-luces").value);
+    const tiempoFuncionamiento = Number(document.querySelector("#tiempo-funcionamiento").value);
+    const consumoHora = Number(document.querySelector("#consumo-hora").value);
+    const costoKwh = Number(document.querySelector("#costo-kwh").value);
+
+    console.log(nombreObra)
+
+
+})
