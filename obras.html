@@ -1,52 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="./css/estilos.css" rel="stylesheet">
 
-        <title>Rafael Lozano-Hemmer | Obras</title>
-    </head>
-    <body>
-        <div id="contenedor">
-            <header id="encabezado">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./css/estilos.css" rel="stylesheet">
 
-                <h1>Rafael Lozano-Hemmer</h1>
-                <p id="subtitulo"><em>Interactividad, espacio público y <strong>arte</strong> tecnológico</em></p>
+    <title>Rafael Lozano-Hemmer | Obras</title>
+</head>
 
-                <nav class="menu">
+<body>
+    <div id="contenedor">
+        <header id="encabezado">
+
+            <h1>Rafael Lozano-Hemmer</h1>
+            <p id="subtitulo"><em>Interactividad, espacio público y <strong>arte</strong> tecnológico</em></p>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="obras.html">Obras</a></li>
+                    <li><a href="experiencia.html">Experiencia</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div class="encabezado-body">
+            <h1>Galería</h1>
+        </div>
+
+        <!--
+        Galeria de obras con JavaScript 
+        "Para generar la galería deberán buscar y elegir al menos 5 obras (se recomienda el sitio oficial del artista)."
+        -->
+
+
+        <div class="encabezado-body">
+            <h1>Sus obras</h1>
+        </div>
+
+        <main class="contenido-secundario">
+
+            <div id="columna-1">
+                <article>
+                    <h2>Sistemas interactivos y tecnología en tiempo real</h2>
+                    <p>El trabajo de Rafael Lozano-Hemmer se basa en el desarrollo de sistemas tecnológicos que reaccionan a la presencia humana. Utiliza dispositivos como cámaras, micrófonos y sensores biométricos para captar información del entorno y transformarla
+                        en respuestas visuales o sonoras.</p>
+                    <p>Estas obras funcionan en tiempo real, generando una relación directa entre acción y resultado. El público no solo observa, sino que influye activamente en el comportamiento de la obra, creando experiencias personalizadas y colectivas
+                        al mismo tiempo.</p>
+                </article>
+
+                <aside>
+                    <h3>Equipo multidisciplinario</h3>
+                    <p>Sus estudios en Montreal y Madrid funcionan como laboratorios; trabaja con un equipo de más de 15 personas, incluyendo ingenieros, programadores y arquitectos, para hacer realidad sus complejas ideas
+                    </p>
+                </aside>
+
+                <img src="./img/lozano-hemmer-3.jpg" alt="Obra Vectorial Elevation de Lozano-Hemmer">
+
+                <aside>
+                    <h3>Enfoque basado en el ritmo cardíaco</h3>
+                    <p>Ha creado obras donde las luces robóticas o los focos vibran al ritmo exacto de las pulsaciones de cientos de participantes.</p>
+                </aside>
+            </div>
+
+            <div id="columna-2">
+
+                <img src="./img/lozano-hemmer-2.jpg" alt="Obra Pulse Room de Lozano-Hemmer" width="90%">
+
+                <article>
+                    <h2>Obras y conceptos clave</h2>
+                    <p>El uso de tecnología en su trabajo no es neutral, sino que se vincula con una mirada crítica sobre temas contemporáneos. Sus obras abordan problemáticas como la vigilancia masiva, el control de datos y la exposición de la identidad
+                        en espacios públicos. A través de estas propuestas, invita a reflexionar sobre cómo las tecnologías afectan la vida cotidiana. La interacción se convierte en una herramienta para visibilizar estas tensiones y cuestionar su impacto
+                        en la sociedad.</p>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="obras.html">Obras</a></li>
-                        <li><a href="experiencia.html">Experiencia</a></li>
+                        <li>Pulse Room</li>
+                        <li>Vectorial Elevation</li>
+                        <li>33 Questions per Minute</li>
+                        <li>Body Movies</li>
                     </ul>
-                </nav>
+                </article>
 
-            </header>
+                <img src="./img/lozano-hemmer-1.jpg" alt="Obra Body Movies de Lozano-Hemmer" width="80%">
 
-            <main class="contenido-secundario">
+            </div>
 
-                <div id="columna-1">
-                    <h3>Buenas tardes</h3>
-                    <p>Esto es un párrafo Esto es un párrafo Esto es un párrafo Esto es un párrafo</p>
-                </div>
-                
-                <div id="columna-2">
-                    <h3>Buenas tardes</h3>
-                    <p>Esto es un párrafo Esto es un párrafo Esto es un párrafo </p>
-                </div>
+        </main>
 
-            </main>
-
-
-            <footer>
-                <address>
+        <footer>
+            <address>
                     Para contactarse escribir a <a href="mailto:rafael@artedigital.com">rafael@artedigital.com</a>
                 </address>
-            </footer>
-        </div>
-    </body>
+        </footer>
+    </div>
+</body>
+
 </html>
