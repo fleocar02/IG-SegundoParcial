@@ -585,3 +585,14 @@ footer a:hover {
     background-color: transparent;
     text-shadow: 0 0 5px rgba(255, 0, 195, 0.699), 0 0 10px rgba(137, 43, 226, 0.578), 0 0 20px rgba(138, 43, 226, 0.2);
 }
+
+footer ul {
+    justify-items: center;
+    display: block;
+}
+
+footer ul li {
+    padding: 2px;
+    list-style: none;
+    gap: 40px;
+}
