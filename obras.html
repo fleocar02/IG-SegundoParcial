@@ -31,23 +31,87 @@
 
         </header>
 
+        <!-- GALERIA DE OBRAS -->
+
         <div class="encabezado-body">
             <h1>Galería</h1>
+            <button id="btn-disenio" class="btn-interactivo">Cambiar Vista Galería</button>
         </div>
 
-        <!--
-        Galeria de obras con JavaScript:
-        "Para generar la galería deberán buscar y elegir al menos 5 obras (se recomienda el sitio oficial del artista)."
+        <!-- FOTOS -->
+
+        <div id="galeria-fotos" class="galeria-contenedor">
+            <div class="galeria-item">
+                <img src="./img/galeria-1.jpg" alt="Body Movies de Rafael Lozano-Hemmer">
+                <div class="galeria-info">
+                    <h3>Body Movies</h3>
+                    <p>2007</p>
+                </div>
+            </div>
+
+            <div class="galeria-item">
+                <img src="./img/galeria-2.jpg" alt="Cloud Display de Rafael Lozano-Hemmer">
+                <div class="galeria-info">
+                    <h3>Cloud Display</h3>
+                    <p>2002</p>
+                </div>
+            </div>
+
+            <div class="galeria-item">
+                <img src="./img/galeria-3.jpg" alt="Border Tuner de Rafael Lozano-Hemmer">
+                <div class="galeria-info">
+                    <h3>Border Tuner</h3>
+                    <p>2006</p>
+                </div>
+            </div>
+
+            <div class="galeria-item">
+                <img src="./img/galeria-4.jpg" alt="Pulse Spiral de Rafael Lozano-Hemmer">
+                <div class="galeria-info">
+                    <h3>Pulse Spiral</h3>
+                    <p>2003</p>
+                </div>
+            </div>
+
+            <div class="galeria-item">
+                <img src="./img/galeria-5.jpg" alt="External Interior de Rafael Lozano-Hemmer">
+                <div class="galeria-info">
+                    <h3>External Interior</h3>
+                    <p>2008</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CAJA DE LUZ -->
+
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-cerrar">x</span>
+            <div class="lightbox-contenido">
+                <img id="lightbox-img" src="" alt="Imagen ampliada">
+                <div id="lightbox-caption">
+                    <h2 id="lightbox-titulo"></h2>
+                    <p id="lightbox-anio"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+        Una de las páginas debe incluir una galería de obras del artista generada con JavaScript. Se debe visualizar una imagen de la obra, el nombre y año de la misma.
+        Para generar la galería deberán buscar y elegir al menos 5 obras (se recomienda el sitio oficial del artista).
+        A la galería se le debe sumar una funcionalidad que permita al usuario realizar un cambio de diseño (cambio de tamaño de las imágenes, cambio de colores u otro).
         -->
 
 
         <div class="encabezado-body">
-            <h1>Sus obras</h1>
+            <h1>Más obras</h1>
         </div>
 
         <main class="contenido-secundario">
 
-            <div id="columna-1">
+            <!--(2) COLUMNAS PAGINA SECUNDARIA DISTINTO ANCHO-->
+
+            <div class="columna-angosta">
                 <article>
                     <h2>Sistemas interactivos y tecnología en tiempo real</h2>
                     <p>El trabajo de Rafael Lozano-Hemmer se basa en el desarrollo de sistemas tecnológicos que reaccionan a la presencia humana. Utiliza dispositivos como cámaras, micrófonos y sensores biométricos para captar información del entorno y transformarla
@@ -70,7 +134,7 @@
                 </aside>
             </div>
 
-            <div id="columna-2">
+            <div class="columna-ancha">
 
                 <img src="./img/lozano-hemmer-2.jpg" alt="Obra Pulse Room de Lozano-Hemmer" width="90%">
 
@@ -99,6 +163,9 @@
                 </address>
         </footer>
     </div>
+
+    <script src="./js/galeria.js "></script>
+
 </body>
 
 </html>

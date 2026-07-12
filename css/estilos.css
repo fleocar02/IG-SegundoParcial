@@ -63,17 +63,17 @@ footer {
     text-align: center;
 }
 
+#subtitulo strong {
+    color: var(--color-acento);
+    text-shadow: 0 0 5px rgba(242, 0, 255, 0.227), 0 0 10px rgba(137, 43, 226, 0.227), 0 0 20px rgba(138, 43, 226, 0.2);
+}
+
 .subtitulo-head {
     font-size: 0.9rem;
     letter-spacing: 3px;
     display: flex;
     color: #2e2e2e;
     margin-bottom: 30px;
-}
-
-#subtitulo strong {
-    color: var(--color-acento);
-    text-shadow: 0 0 5px rgba(242, 0, 255, 0.227), 0 0 10px rgba(137, 43, 226, 0.227), 0 0 20px rgba(138, 43, 226, 0.2);
 }
 
 hr {
@@ -114,6 +114,9 @@ hr {
 
 
 /*----- CONTENIDO -----*/
+
+
+/* ESTILOS GENERALES */
 
 main {
     padding: 50px;
@@ -343,7 +346,216 @@ video:hover {
 .ejercicio button {
     padding: 10px 20px;
     margin-top: 10px;
+}
+
+
+/* DATO CURIOSO */
+
+#dato-curioso {
+    padding: 30px 50px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#dato-curioso h3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.3rem;
+    border-left: 4px solid var(--color-acento);
+    padding-left: 15px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#dato-curioso p {
+    margin: 0;
+    flex: 1;
+}
+
+#dato-curioso button {
+    padding: 10px 20px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    white-space: nowrap;
     cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#dato-curioso button:hover {
+    background-color: var(--color-acento)
+}
+
+
+/* GALERÍA DE FOTOS */
+
+
+/* Grilla base de la galería */
+
+.galeria-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.galeria-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    width: calc(33.333% - 14px);
+    /* Tres columnas por fila */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.galeria-item img {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.galeria-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.galeria-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: 'Barlow', sans-serif;
+    color: #111;
+}
+
+.galeria-info p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+
+/* DISEÑO ALTERNATIVO */
+
+.galeria-alternativa .galeria-item {
+    width: calc(50% - 10px);
+    /* Pasa a dos columnas más grandes */
+    background: var(--fondo-header);
+    border-color: var(--color-acento);
+}
+
+.galeria-alternativa .galeria-info h3 {
+    color: #fff;
+}
+
+.galeria-alternativa .galeria-info p {
+    color: var(--color-primario);
+}
+
+
+/* BOTÓN INTERACTIVO */
+
+.btn-interactivo {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.btn-interactivo:hover {
+    background-color: var(--color-primario);
+}
+
+
+/* LIGHTBOX (OCULTO POR DEFECTO) */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CONTENIDO DENTRO DEL LIGHTBOX */
+
+.lightbox-contenido {
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    animation: zoom 0.3s ease-in-out;
+}
+
+.lightbox-contenido img {
+    max-height: 70vh;
+    width: auto;
+    margin: 0 auto;
+    border: 3px solid white;
+}
+
+#lightbox-caption {
+    margin-top: 15px;
+    color: white;
+}
+
+#lightbox-titulo {
+    font-family: 'Barlow', sans-serif;
+    margin: 5px 0;
+}
+
+#lightbox-anio {
+    color: var(--color-primario);
+    margin: 0;
+    text-align: center;
+}
+
+
+/* BOTÓN CERRAR */
+
+.lightbox-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lightbox-cerrar:hover {
+    color: var(--color-acento);
 }
 
 

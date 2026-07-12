@@ -43,20 +43,18 @@ let maxTiempoFuncionamiento = -1;
 let obraMayorTiempoNombre = "";
 let obraMayorTiempoCosto = 0;
 
-// ESTADO DE BOTÓN DESHABILITADO HASTA QUE HAYA RESULTADOS
+// ESTADO DE BOTÓN DESHABILITADO
 btnReset.disabled = true;
 
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // CAPTURA DE DATOS FORMULARIO
+    // CAPTURA DE INPUTS FORMULARIO
     const nombreObra = document.querySelector("#nombre-obra").value;
     const cantidadLuces = Number(document.querySelector("#cantidad-luces").value);
     const tiempoFuncionamiento = Number(document.querySelector("#tiempo-funcionamiento").value);
     const consumoHora = Number(document.querySelector("#consumo-hora").value);
     const costoKwh = Number(document.querySelector("#costo-kwh").value);
-
-    console.log(nombreObra)
 
     // VALIDACIÓN
 
