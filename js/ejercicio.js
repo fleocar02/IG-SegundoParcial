@@ -58,5 +58,99 @@ formulario.addEventListener("submit", (e) => {
 
     console.log(nombreObra)
 
+    // VALIDACIÓN
 
-})
+    if (!nombreObra) {
+        alert("Por favor, ingrese un nombre válido para la obra.");
+        return;
+    }
+
+    if (isNaN(cantidadLuces) || cantidadLuces <= 0) {
+        alert("La cantidad de luces debe ser mayor a 0.");
+        return;
+    }
+
+    if (isNaN(tiempoFuncionamiento) || tiempoFuncionamiento <= 0 || tiempoFuncionamiento > 24) {
+        alert("El tiempo de funcionamiento diario debe ser entre 0 y 24 hs.");
+        return;
+    }
+
+    if (isNaN(consumoHora) || consumoHora <= 0) {
+        alert("El consumo por hora debe ser un número positivo.");
+        return;
+    }
+
+    if (isNaN(costoKwh) || costoKwh <= 0) {
+        alert("El costo por kWh debe ser un número positivo.");
+        return;
+    }
+
+    // CÁLCULOS POR OBRA
+
+    totalObras++;
+
+    // CONSUMO DIARIO (luces * horas * consumo x hora)
+    const consumoDiarioObra = cantidadLuces * tiempoFuncionamiento * consumoHora;
+    consumoDiarioTotal += consumoDiarioObra
+
+    // COSTO DIARIO
+    const costoDiarioObra = consumoDiarioObra * costoKwh;
+
+    // EVALUAR OBRA MAYOR TIEMPO DE FUNCIONAMIENTO
+
+    if (tiempoFuncionamiento > maxTiempoFuncionamiento) {
+        maxTiempoFuncionamiento = tiempoFuncionamiento;
+        obraMayorTiempoNombre = nombreObra;
+        obraMayorTiempoCosto = costoDiarioObra;
+    }
+
+    // EVALUAR SI USA MÁS DE 20 LUCES
+
+    if (cantidadLuces > 20) {
+        obrasMasDe20Luces++;
+    }
+
+    // ACTUALIZACIÓN DE RESULTADOS
+
+    const promedioConsumo = consumoDiarioTotal / totalObras;
+    const porcentajeMas20 = (obrasMasDe20Luces / totalObras) * 100;
+
+    txtCantidadObras.innerHTML = `<strong>Cantidad de obras subidas:</strong> ${totalObras}`;
+
+    txtConsumoDiario.innerHTML = `<strong>Consumo diario total:</strong> ${Math.round(consumoDiarioTotal)} kWh <br>
+    <strong>Consumo diario promedio por obra:</strong> ${Math.round(promedioConsumo)} kWh`;
+
+    txtMayorTiempo.innerHTML = `<strong>Obra con mayor tiempo de funcionamiento:</strong> ${obraMayorTiempoNombre} (${maxTiempoFuncionamiento} horas) <br>
+    <strong>Su costo diario es:</strong> $${Math.round(obraMayorTiempoCosto)}`;
+
+    txtPorcentajeObras.innerHTML = `<strong>Porcentaje de obras con más de 20 luces:</strong> ${Math.round(porcentajeMas20)}%`;
+
+    // HABILITAR BOTÓN DE REINICIO
+    btnReset.disabled = false;
+
+    // LIMPIAR CAMPOS DEL FORMULARIO
+    formulario.reset();
+
+    // BOTÓN DE REINICIO
+
+    btnReset.addEventListener("click", () => {
+
+        // RESETEAR VARIABLES GLOBALES
+        totalObras = 0;
+        consumoDiarioTotal = 0;
+        obrasMasDe20Luces = 0;
+        maxTiempoFuncionamiento = -1;
+        obraMayorTiempoNombre = "";
+        obraMayorTiempoCosto = 0;
+
+        // LIMPIAR TEXTO
+        txtCantidadObras.innerHTML = "";
+        txtConsumoDiario.innerHTML = "";
+        txtMayorTiempo.innerHTML = "";
+        txtPorcentajeObras.innerHTML = "";
+
+
+        // DESHABILITAR BOTÓN DE REINICIO
+        btnReset.disabled = true;
+    });
+});
